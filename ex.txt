@@ -1,0 +1,61 @@
+ Exercice 1
+
+Dans la vue liste des ventes, afficher la dernière date de livraison ouverte. Si la date à plus de 12 mois alors afficher la ligne en rouge.
+
+
+
+Exercice 2
+
+Ajouter un groupe utilisateurs "Sale Approver" dont le but est d'approuver les bons de commandes avant leur validation.
+
+Un bouton "Approve" doit être ajouté sur le SO et n'est visible que pour le groupe d'utilisateur "Sale Approver"
+
+Lorsque le bon de commande n'est pas encore approuvé il ne peut pas être confirmé, dans le cas où un utilisateur essaye de le confirmer il doit recevoir une erreur.
+
+Lorsque l'on crée le SO on devrait pouvoir indiquer qu'il est à approuver, une activité doit être rajouté sur le SO indiquant à la sales personne qu'il doit approuver le SO.
+
+Faire en sorte que l'on puisse filtrer facilement dans la liste de bons de commande pour afficher tous les bons de commandes qui doivent être approuvés.
+
+
+
+Exercice 3: Requêtes SQL
+
+Faire en sorte d'archiver toutes les vues d'un module spécifique à votre choix.
+
+Créer une requête qui met le pays belgique sur tous les contacts ayant comme code postal, 1000, 5000 et 1300.
+
+
+
+Exercice 4 : Analyse d’une solution
+
+
+
+La Société X est une société de vente des services sur la plate-forme d’e-commerce Odoo.
+
+
+
+Les prix des services, vendu en ligne, sont généralement vendus à faible prix (Exemple 50 dhs/ par commande).
+
+Les gros clients effectuent beaucoup de commande la même journée et à chaque fois reçoivent un email de confirmation + un email qui contient les instructions de paiement pour payer par un virement bancaire et attendre leur paiement durant 2-3 jours. Par la suite la société X crée la facture, l'envoie au client et effectue la livraison.
+
+
+
+Que penses-tu de cette procédure et qu’elles sont les conséquences sur la relation avec le client ?
+
+
+
+Solution proposée :
+
+
+
+La société X voulait améliorer cette procédure pour permettre seulement au gros clients la possibilité de payer un acompte (exemple : client paye acompte de 1.000 MAD) et que cet acompte soit transformé en crédits. Ces crédits seront utilisés pour payer des commandes futures, ceci permet aux clients de ne pas devoir faire un virement pour chaque commande.
+
+Cela ne concerne pas les clients passagers
+
+
+
+1- Q tu penses de cette solution ? est-ce qu'elle peut améliorer la situation, où vois-tu d'autres propositions ?
+
+
+
+2-  Si on retient cette solution, pourrais-tu réfléchir à la manière de l’implanter techniquement dans odoo? (Exemple : les champs à ajouter, les modèles, les interfaces à toucher, actions et les boutons à ajouter).
