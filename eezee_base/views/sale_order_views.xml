@@ -10,7 +10,7 @@
                 <field name="old_delivery_status" invisible="1" optional="hide"/>
             </xpath>
             <xpath expr="//field[@name='commitment_date']" position="attributes">
-                <attribute name="optional">show</attribute>
+                <attribute name="invisible">old_delivery_status=='normal'</attribute>
             </xpath>
             <xpath expr="//tree" position="attributes">
                 <attribute name="decoration-danger">old_delivery_status=='late'</attribute>
