@@ -45,12 +45,14 @@ class SaleOrder(models.Model):
 
     @api.model
     def create(self, vals):
-        if not vals.get('sale_approved'):
+        sale = super(SaleOrder, self).create(vals)
+        if sale and not sale.sale_approved:
             # Add code to create activity
             self.env['mail.activity'].create({
-                'res_id': vals.get('user_id'),
-                'res_model_id': self.env['ir.model'].search([('model', '=', 'sale.order')], limit=1).id,
+                'res_id': sale.id,
+                'res_model_id': self.env.ref('sale.model_sale_order').id,
                 'activity_type_id': self.env.ref('mail.mail_activity_data_todo').id,
                 'summary': 'Approve Sale Order',
+                'user_id': sale.user_id.id,
             })
-        return super(SaleOrder, self).create(vals)
+        return sale

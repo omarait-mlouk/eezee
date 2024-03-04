@@ -24,8 +24,9 @@
         <field name="inherit_id" ref="sale.view_order_form"/>
         <field name="arch" type="xml">
             <header position="inside">
+                <field name="sale_approved" invisible="1"/>
                 <button name="action_sale_approve" type="object" string="Approve" class="btn-primary"
-                        groups="eezee_base.group_sale_approver"/>
+                        groups="eezee_base.group_sale_approver" invisible="sale_approved"/>
             </header>
         </field>
     </record>
